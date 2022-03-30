@@ -1,10 +1,15 @@
 <template>
-  <h3>this is the nav</h3>
+    <router-link to="/aceleration">Aceleration</router-link>
 </template>
 
 <script>
 export default {
-    name: 'nav-bar'
+    name: 'nav-bar',
+    data(){
+        return {
+            text: 'center'
+        }
+    }
 }
 </script>
 

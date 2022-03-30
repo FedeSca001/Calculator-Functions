@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app class="app">
     <NavBar/>
     <Display/>
     <v-main>
@@ -23,3 +23,7 @@ export default {
   }),
 };
 </script>
+
+<style scoped>
+
+</style>

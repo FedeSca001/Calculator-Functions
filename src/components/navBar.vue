@@ -1,5 +1,8 @@
 <template>
-    <router-link to="/aceleration">Aceleration</router-link>
+    <section>
+        <router-link to="/">Home</router-link> | 
+        <router-link to="/aceleration">Aceleration</router-link>
+    </section>
 </template>
 
 <script>

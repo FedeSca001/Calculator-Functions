@@ -25,5 +25,7 @@ export default {
 </script>
 
 <style scoped>
-
+.app{
+  font-family: 'IBM Plex Mono', monospace;
+}
 </style>

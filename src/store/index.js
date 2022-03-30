@@ -5,16 +5,23 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    vi: 10,
-    vf: 10,
-    t: 10,
-    a: 12,
-    m: 1,
-    f: 10
+    vi: 18.5,
+    vf: 46.1,
+    t: 2.47,
+    a: 0,
+    m: 0,
+    f: 0
   },
   getters: {
   },
   mutations: {
+    calculateAcceleration () {
+      if (!this.vf && !this.vi && !this.t){
+        this.a = ((this.vf - this.vi) / this.t)
+      } else {
+        alert('completa todos los campos')
+      }
+    }
   },
   actions: {
   },

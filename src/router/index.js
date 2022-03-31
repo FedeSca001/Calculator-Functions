@@ -14,6 +14,11 @@ const routes = [
     path: '/aceleration',
     name: 'aceleration-comp',
     component: () => import('@/views/Aceleration.vue')
+  },
+  {
+    path: '/time',
+    name: 'time-comp',
+    component: ()=> import('@/views/Time.vue')
   }
 ]
 

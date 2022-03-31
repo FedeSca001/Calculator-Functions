@@ -5,22 +5,25 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    vi: 18.5,
-    vf: 46.1,
-    t: 2.47,
-    a: 0,
-    m: 0,
-    f: 0
+    acceleration: 0,
+    topSpeed: 0,
+    initSpeed: 0,
+    time: 0
   },
   getters: {
   },
   mutations: {
-    calculateAcceleration () {
-      if (!this.vf && !this.vi && !this.t){
-        this.a = ((this.vf - this.vi) / this.t)
-      } else {
-        alert('completa todos los campos')
-      }
+    calculateAcceleration (state) {
+      state.acceleration = (state.topSpeed - state.initSpeed)/ state.time
+    },
+    setTime(state,n){
+      state.time = n
+    },
+    setTopSpeed(state,n){
+      state.topSpeed = n
+    },
+    setInitSpeed(state,n){
+      state.initSpeed=n
     }
   },
   actions: {

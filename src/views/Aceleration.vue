@@ -1,17 +1,25 @@
 <template>
   <div @keyup.enter="calculateAcceleration" class="containData">
     <h3>Acceleration</h3>
-    <h4 class="formula">a = top speed - initial velocity / time</h4>
-    <div class="variables">
-      <p>Initial velocity - {{vi}}</p>
-      <p>Top speed - {{vf}}</p>
-      <p>Time - {{t}}</p>
-    </div>
-    <div>
-      <p>Acceleration</p>
-      <input type="number">
-      <button @click="calculateAcceleration()">Calc</button>
-    </div>
+    <h4 class="formula">acceleration = top speed - initial speed / time</h4>
+    <section class="sectionColumns">
+      <v-col cols="6" class="variables">
+        <p>Initial velocity</p>
+        <input type="number" placeholder="Initial speed in m/s" @change="(e)=>{setInitSpeed(e.target.value)}">
+        <p>Top speed</p>
+        <input type="number" placeholder="Top speed in m/s" @change="(e)=>{setTopSpeed(e.target.value)}">
+        <p>Time</p>
+        <input type="number" placeholder="Time in s" @change="(e)=>{setTime(e.target.value)}">
+      </v-col>
+      <v-col cols="6">
+        <p>Acceleration value</p>
+        <h3>{{acceleration}}</h3>
+        <button @click="calculateAcceleration"
+          class="buttonCalculate">
+            Calculate acceleration
+        </button>
+      </v-col>
+    </section>
   </div>
 </template>
 
@@ -21,12 +29,12 @@ export default {
   name: 'aceleration-comp',
   methods: {
     ...mapMutations([
-      'calculateAcceleration'
+      'calculateAcceleration', 'setTime','setTopSpeed','setInitSpeed'
     ])
   },
   computed: {
       ...mapState([
-        'vi','vf','t','a'
+        'acceleration', 'topSpeed', 'initSpeed', 'time'
       ])
   }
 }
@@ -44,11 +52,20 @@ h3{
   width: max-content;
   margin: 0.2vw auto;
 }
+.sectionColumns{
+  display: flex;
+  flex-wrap: wrap;
+}
 .containData{
   margin: 1vw auto;
   width: 80vw;
 }
 .variables{
   color: darkgreen;
+}
+.buttonCalculate{
+  padding: 1vw;
+  border-radius: 3vw;
+  background-color: lightgreen;
 }
 </style>

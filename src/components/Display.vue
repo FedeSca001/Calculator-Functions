@@ -1,8 +1,10 @@
 <template>
   <div class="displayContainter">
     <h2>Display</h2>
-    <p>Initial velocity: {{vi}}</p>
-    <p>Acceleration: {{a}}</p>
+    <p>Initial speed: {{initSpeed}}</p>
+    <p>Top speed: {{topSpeed}}</p>
+    <p>Time: {{time}}</p>
+    <p>Acceleration: {{acceleration}}</p>
   </div>
 </template>
 
@@ -12,7 +14,7 @@ export default {
     name: 'display-comp',
     computed: {
       ...mapState([
-        'vi','vf','t','a','m','f'
+        'acceleration', 'topSpeed', 'initSpeed', 'time'
       ])
     }
 }

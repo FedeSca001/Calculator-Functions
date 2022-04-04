@@ -8,7 +8,9 @@ export default new Vuex.Store({
     acceleration: 0,
     topSpeed: 0,
     initSpeed: 0,
-    time: 0
+    time: 0,
+    mass: 0,
+    force: 0
   },
   getters: {
   },
@@ -16,14 +18,23 @@ export default new Vuex.Store({
     calculateAcceleration (state) {
       state.acceleration = (state.topSpeed - state.initSpeed)/ state.time
     },
+    calculateForce (state) {
+      state.force = state.mass * state.acceleration
+    },
     setTime(state,n){
       state.time = n
     },
     setTopSpeed(state,n){
       state.topSpeed = n
     },
+    setAcceleration(state,n){
+      state.acceleration = n
+    },
     setInitSpeed(state,n){
       state.initSpeed=n
+    },
+    setMass(state,n){
+      state.mass=n
     }
   },
   actions: {

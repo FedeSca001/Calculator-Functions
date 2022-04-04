@@ -5,6 +5,8 @@
     <p>Top speed: {{topSpeed}}</p>
     <p>Time: {{time}}</p>
     <p>Acceleration: {{acceleration}}</p>
+    <p>Mass: {{mass}}</p>
+    <p>Force: {{force}}</p>
   </div>
 </template>
 
@@ -14,7 +16,7 @@ export default {
     name: 'display-comp',
     computed: {
       ...mapState([
-        'acceleration', 'topSpeed', 'initSpeed', 'time'
+        'acceleration', 'topSpeed', 'initSpeed', 'time', 'force', 'mass'
       ])
     }
 }

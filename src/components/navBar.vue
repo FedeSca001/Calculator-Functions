@@ -2,6 +2,7 @@
     <section>
         <router-link to="/">Home</router-link> | 
         <router-link to="/aceleration">Aceleration</router-link> | 
+        <router-link to="/force">Force</router-link> | 
         <router-link to="/time">Time</router-link>
     </section>
 </template>

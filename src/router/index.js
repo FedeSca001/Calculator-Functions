@@ -19,6 +19,11 @@ const routes = [
     path: '/time',
     name: 'time-comp',
     component: ()=> import('@/views/Time.vue')
+  },
+  {
+    path: '/force',
+    name: 'force-comp',
+    component: () => import('@/views/Force.vue')
   }
 ]
 

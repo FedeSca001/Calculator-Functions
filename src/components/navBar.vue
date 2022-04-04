@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="containSections">
         <router-link to="/">Home</router-link> | 
         <router-link to="/aceleration">Aceleration</router-link> | 
         <router-link to="/force">Force</router-link> | 
@@ -18,6 +18,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.containSections{
+    text-align: center;
+}
 </style>

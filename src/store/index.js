@@ -12,9 +12,8 @@ export default new Vuex.Store({
     mass: 0,
     distance: 0,
     force: 0,
+    angle: 0,
     work: 0
-  },
-  getters: {
   },
   mutations: {
     calculateAcceleration (state) {
@@ -24,13 +23,22 @@ export default new Vuex.Store({
       state.force = state.mass * state.acceleration
     },
     calculateTime (state){
-      state.time = (state.topSpeed - state.initSpeed)/ state.acceleration
+      state.time = (state.topSpeed - state.initSpeed) / state.acceleration
     },
     calculateWork(state){
-      state.work = state.force * state.distance
+      state.work = state.force * state.distance * (Math.cos(Number(state.angle)))
     },
     setTime(state,n){
       state.time = n
+    },
+    setForce(state,n){
+      state.force = n
+    },
+    setDistance(state,n){
+      state.distance = n
+    },
+    setAngle(state,n){
+      state.angle = n
     },
     setTopSpeed(state,n){
       state.topSpeed = n
@@ -42,11 +50,7 @@ export default new Vuex.Store({
       state.initSpeed=n
     },
     setMass(state,n){
-      state.mass=n
+      state.mass = n
     }
-  },
-  actions: {
-  },
-  modules: {
   }
 })

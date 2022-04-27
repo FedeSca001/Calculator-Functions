@@ -1,20 +1,30 @@
 <template>
     <div @keyup.enter="calculateAcceleration" class="containData">
     <h3>Work</h3>
-    <h4 class="formula">Work = force * distance</h4>
+    <h4 class="formula">Work = force * distance * cos(angle)</h4>
     <section class="sectionColumns">
       <v-col cols="6" class="variables">
-        <p>Initial velocity</p>
-        <input type="number" placeholder="Initial speed in m/s" @change="(e)=>{setInitSpeed(e.target.value)}">
-        <p>Top speed</p>
-        <input type="number" placeholder="Top speed in m/s" @change="(e)=>{setTopSpeed(e.target.value)}">
-        <p>Acceleration</p>
-        <input type="number" placeholder="Time in m/s" @change="(e)=>{setAcceleration(e.target.value)}">
+        <p>Force</p>
+        <input
+            type="number"
+            placeholder="Force"
+            @change="(e)=>{setForce(e.target.value)}">
+        <p>Distance</p>
+        <input
+            type="number"
+            placeholder="Distance"
+            @change="(e)=>{setDistance(e.target.value)}">
+        <p>Angle</p>
+        <input
+            type="number"
+            placeholder="Angle"
+            @change="(e)=>{setAngle(e.target.value)}">
       </v-col>
       <v-col cols="6">
         <p>Work value</p>
         <h3>{{work}}</h3>
-        <button @click="calculateWork"
+        <button
+        @click="calculateWork()"
           class="buttonCalculate">
             Calculate Work
         </button>
@@ -30,12 +40,12 @@ export default {
     name: 'work-comp',
     methods: {
         ...mapMutations([
-            'calculateWork'
+            'calculateWork', 'setForce', 'setDistance', 'setAngle'
         ])
     },
     computed: {
         ...mapState([
-            'force', 'distance', 'work'
+            'work'
         ])
     }
 }

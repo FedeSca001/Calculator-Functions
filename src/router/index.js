@@ -24,6 +24,11 @@ const routes = [
     path: '/force',
     name: 'force-comp',
     component: () => import('@/views/Force.vue')
+  },
+  {
+    path: '/power',
+    name: 'power-comp',
+    component: ()=> import ('@/views/Power.vue')
   }
 ]
 

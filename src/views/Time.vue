@@ -8,13 +8,13 @@
         <input type="number" placeholder="Initial speed in m/s" @change="(e)=>{setInitSpeed(e.target.value)}">
         <p>Top speed</p>
         <input type="number" placeholder="Top speed in m/s" @change="(e)=>{setTopSpeed(e.target.value)}">
-        <p>Time</p>
-        <input type="number" placeholder="Time in s" @change="(e)=>{setTime(e.target.value)}">
+        <p>Acceleration</p>
+        <input type="number" placeholder="Time in m/s" @change="(e)=>{setAcceleration(e.target.value)}">
       </v-col>
       <v-col cols="6">
         <p>Acceleration value</p>
         <h3>{{acceleration}}</h3>
-        <button @click="calculateAcceleration"
+        <button @click="calculateTime"
           class="buttonCalculate">
             Calculate acceleration
         </button>
@@ -29,7 +29,7 @@ export default {
     name:'time-comp',
     methods: {
     ...mapMutations([
-      'calculateAcceleration', 'setTime','setTopSpeed','setInitSpeed'
+      'calculateTime', 'setAcceleration','setTopSpeed','setInitSpeed'
     ])
     },
     computed: {

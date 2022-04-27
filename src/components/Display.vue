@@ -1,13 +1,15 @@
 <template>
-  <div class="displayContainter">
+  <section class="displayContainter">
     <h2>Display</h2>
+    <div class="flexContain">
     <p>Initial speed: {{initSpeed}}</p>
     <p>Top speed: {{topSpeed}}</p>
     <p>Time: {{time}}</p>
     <p>Acceleration: {{acceleration}}</p>
     <p>Mass: {{mass}}</p>
-    <p>Force: {{force}}</p>
-  </div>
+    <p>Force: {{force}}</p>      
+    </div>
+  </section>
 </template>
 
 <script>
@@ -35,5 +37,14 @@ export default {
 }
 h2{
   font-size: 2vw;
+}
+p{
+  border: 2.5px solid white;
+  border-radius: 5px;
+  margin: 1.5vw;
+  padding: 1vw;
+}
+.flexContain{
+  display: flex;
 }
 </style>

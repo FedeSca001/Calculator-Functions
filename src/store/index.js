@@ -21,6 +21,9 @@ export default new Vuex.Store({
     calculateForce (state) {
       state.force = state.mass * state.acceleration
     },
+    calculateTime (state){
+      state.time = (state.topSpeed - state.initSpeed)/ state.acceleration
+    },
     setTime(state,n){
       state.time = n
     },

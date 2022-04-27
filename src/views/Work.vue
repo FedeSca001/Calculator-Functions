@@ -1,7 +1,7 @@
 <template>
     <div @keyup.enter="calculateAcceleration" class="containData">
-    <h3>Time</h3>
-    <h4 class="formula">Time = top speed - initial speed / acceleration</h4>
+    <h3>Work</h3>
+    <h4 class="formula">Work = force * distance</h4>
     <section class="sectionColumns">
       <v-col cols="6" class="variables">
         <p>Initial velocity</p>
@@ -12,11 +12,11 @@
         <input type="number" placeholder="Time in m/s" @change="(e)=>{setAcceleration(e.target.value)}">
       </v-col>
       <v-col cols="6">
-        <p>Acceleration value</p>
-        <h3>{{acceleration}}</h3>
-        <button @click="calculateTime"
+        <p>Work value</p>
+        <h3>{{work}}</h3>
+        <button @click="calculateWork"
           class="buttonCalculate">
-            Calculate Time
+            Calculate Work
         </button>
       </v-col>
     </section>
@@ -25,16 +25,17 @@
 
 <script>
 import { mapMutations, mapState } from 'vuex'
+
 export default {
-    name:'time-comp',
+    name: 'work-comp',
     methods: {
-    ...mapMutations([
-      'calculateTime', 'setAcceleration','setTopSpeed','setInitSpeed'
-    ])
+        ...mapMutations([
+            'calculateWork'
+        ])
     },
     computed: {
         ...mapState([
-            'acceleration', 'topSpeed', 'initSpeed', 'time'
+            'force', 'distance', 'work'
         ])
     }
 }

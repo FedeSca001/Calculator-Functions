@@ -10,7 +10,9 @@ export default new Vuex.Store({
     initSpeed: 0,
     time: 0,
     mass: 0,
-    force: 0
+    distance: 0,
+    force: 0,
+    work: 0
   },
   getters: {
   },
@@ -23,6 +25,9 @@ export default new Vuex.Store({
     },
     calculateTime (state){
       state.time = (state.topSpeed - state.initSpeed)/ state.acceleration
+    },
+    calculateWork(state){
+      state.work = state.force * state.distance
     },
     setTime(state,n){
       state.time = n

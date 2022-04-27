@@ -4,6 +4,7 @@
         <router-link to="/aceleration">Aceleration</router-link> | 
         <router-link to="/time">Time</router-link> | 
         <router-link to="/power">Power</router-link> | 
+        <router-link to="/work">Work</router-link> | 
         <router-link to="/force">Force</router-link>
     </section>
 </template>

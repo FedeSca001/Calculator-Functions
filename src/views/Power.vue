@@ -19,7 +19,7 @@
         <p>Power value</p>
         <h3>{{power}}</h3>
         <button
-        @click="calculateWork()"
+        @click="calculatePower()"
           class="buttonCalculate">
             Calculate Powe
         </button>

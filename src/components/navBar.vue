@@ -11,12 +11,7 @@
 
 <script>
 export default {
-    name: 'nav-bar',
-    data(){
-        return {
-            text: 'center'
-        }
-    }
+    name: 'nav-bar'
 }
 </script>
 
@@ -26,6 +21,5 @@ export default {
 }
 .links{
     color: black;
-
 }
 </style>

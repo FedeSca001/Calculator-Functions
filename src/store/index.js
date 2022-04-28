@@ -26,7 +26,8 @@ export default new Vuex.Store({
       state.time = (state.topSpeed - state.initSpeed) / state.acceleration
     },
     calculateWork(state){
-      state.work = state.force * state.distance * (Math.cos(Number(state.angle)))
+      let cos = Math.cos(state.angle)
+      state.work = state.force * state.distance * cos
     },
     setTime(state,n){
       state.time = n

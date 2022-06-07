@@ -1,9 +1,9 @@
 <template>
   <v-app class="app">
-    <NavBar/>
-    <Display/>
+    <NavBar />
+    <Display />
     <v-main>
-      <router-view/>
+      <router-view />
     </v-main>
   </v-app>
 </template>
@@ -13,11 +13,11 @@ import NavBar from "@/components/navBar.vue";
 import Display from "./components/Display.vue";
 
 export default {
-  name: 'App',
-    components: {
+  name: "App",
+  components: {
     NavBar,
-    Display
-},
+    Display,
+  },
   data: () => ({
     //
   }),
@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style scoped>
-.app{
-  font-family: 'IBM Plex Mono', monospace;
+.app {
+  font-family: "IBM Plex Mono", monospace;
 }
 </style>

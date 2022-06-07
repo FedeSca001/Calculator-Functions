@@ -1,7 +1,7 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from "vue";
+import Vuex from "vuex";
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
@@ -17,48 +17,48 @@ export default new Vuex.Store({
     power: 0,
   },
   mutations: {
-    calculateAcceleration (state) {
-      state.acceleration = (state.topSpeed - state.initSpeed)/ state.time
+    calculateAcceleration(state) {
+      state.acceleration = (state.topSpeed - state.initSpeed) / state.time;
     },
-    calculateForce (state) {
-      state.force = state.mass * state.acceleration
+    calculateForce(state) {
+      state.force = state.mass * state.acceleration;
     },
-    calculateTime (state){
-      state.time = (state.topSpeed - state.initSpeed) / state.acceleration
+    calculateTime(state) {
+      state.time = (state.topSpeed - state.initSpeed) / state.acceleration;
     },
-    calculateWork(state){
-      let cos = Math.cos(state.angle)
-      state.work = state.force * state.distance * cos
+    calculateWork(state) {
+      let cos = Math.cos(state.angle);
+      state.work = state.force * state.distance * cos;
     },
-    calculatePower(state){
-      state.power = state.work / state.time
+    calculatePower(state) {
+      state.power = state.work / state.time;
     },
-    setTime(state,n){
-      state.time = n
+    setTime(state, n) {
+      state.time = n;
     },
-    setForce(state,n){
-      state.force = n
+    setForce(state, n) {
+      state.force = n;
     },
-    setWork(state,n){
-      state.work=n
+    setWork(state, n) {
+      state.work = n;
     },
-    setDistance(state,n){
-      state.distance = n
+    setDistance(state, n) {
+      state.distance = n;
     },
-    setAngle(state,n){
-      state.angle = n
+    setAngle(state, n) {
+      state.angle = n;
     },
-    setTopSpeed(state,n){
-      state.topSpeed = n
+    setTopSpeed(state, n) {
+      state.topSpeed = n;
     },
-    setAcceleration(state,n){
-      state.acceleration = n
+    setAcceleration(state, n) {
+      state.acceleration = n;
     },
-    setInitSpeed(state,n){
-      state.initSpeed=n
+    setInitSpeed(state, n) {
+      state.initSpeed = n;
     },
-    setMass(state,n){
-      state.mass = n
-    }
-  }
-})
+    setMass(state, n) {
+      state.mass = n;
+    },
+  },
+});

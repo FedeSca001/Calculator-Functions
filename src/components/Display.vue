@@ -2,32 +2,39 @@
   <section class="displayContainter">
     <h2>Display</h2>
     <div class="flexContain">
-    <p>Initial speed: {{initSpeed}}</p>
-    <p>Top speed: {{topSpeed}}</p>
-    <p>Time: {{time}}</p>
-    <p>Acceleration: {{acceleration}}</p>
-    <p>Mass: {{mass}}</p>
-    <p>Force: {{force}}</p>
-    <p>Angle: {{angle}}</p>
-    <p>Distance: {{distance}}</p>
+      <p>Initial speed: {{ initSpeed }}</p>
+      <p>Top speed: {{ topSpeed }}</p>
+      <p>Time: {{ time }}</p>
+      <p>Acceleration: {{ acceleration }}</p>
+      <p>Mass: {{ mass }}</p>
+      <p>Force: {{ force }}</p>
+      <p>Angle: {{ angle }}</p>
+      <p>Distance: {{ distance }}</p>
     </div>
   </section>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState } from "vuex";
 export default {
-    name: 'display-comp',
-    computed: {
-      ...mapState([
-        'acceleration', 'topSpeed', 'initSpeed', 'time', 'force', 'mass', 'distance', 'angle'
-      ])
-    }
-}
+  name: "display-comp",
+  computed: {
+    ...mapState([
+      "acceleration",
+      "topSpeed",
+      "initSpeed",
+      "time",
+      "force",
+      "mass",
+      "distance",
+      "angle",
+    ]),
+  },
+};
 </script>
 
 <style scoped>
-.displayContainter{
+.displayContainter {
   width: 90vw;
   height: 20vw;
   margin: 0 auto;
@@ -37,16 +44,16 @@ export default {
   color: white;
   border-radius: 0.5vw;
 }
-h2{
+h2 {
   font-size: 2vw;
 }
-p{
+p {
   border: 2.5px solid white;
   border-radius: 5px;
   margin: 1.5vw;
   padding: 1vw;
 }
-.flexContain{
+.flexContain {
   display: flex;
 }
 </style>

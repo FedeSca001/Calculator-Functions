@@ -5,18 +5,41 @@
     <section class="sectionColumns">
       <v-col cols="6" class="variables">
         <p>Initial velocity</p>
-        <input type="number" placeholder="Initial speed in m/s" @change="(e)=>{setInitSpeed(e.target.value)}">
+        <input
+          type="number"
+          placeholder="Initial speed in m/s"
+          @change="
+            (e) => {
+              setInitSpeed(e.target.value);
+            }
+          "
+        />
         <p>Top speed</p>
-        <input type="number" placeholder="Top speed in m/s" @change="(e)=>{setTopSpeed(e.target.value)}">
+        <input
+          type="number"
+          placeholder="Top speed in m/s"
+          @change="
+            (e) => {
+              setTopSpeed(e.target.value);
+            }
+          "
+        />
         <p>Time</p>
-        <input type="number" placeholder="Time in s" @change="(e)=>{setTime(e.target.value)}">
+        <input
+          type="number"
+          placeholder="Time in s"
+          @change="
+            (e) => {
+              setTime(e.target.value);
+            }
+          "
+        />
       </v-col>
       <v-col cols="6">
         <p>Acceleration value</p>
-        <h3>{{acceleration}}</h3>
-        <button @click="calculateAcceleration"
-          class="buttonCalculate">
-            Calculate acceleration
+        <h3>{{ acceleration }}</h3>
+        <button @click="calculateAcceleration" class="buttonCalculate">
+          Calculate acceleration
         </button>
       </v-col>
     </section>
@@ -24,27 +47,28 @@
 </template>
 
 <script>
-import { mapMutations, mapState } from 'vuex'
+import { mapMutations, mapState } from "vuex";
 export default {
-  name: 'aceleration-comp',
+  name: "aceleration-comp",
   methods: {
     ...mapMutations([
-      'calculateAcceleration', 'setTime','setTopSpeed','setInitSpeed'
-    ])
+      "calculateAcceleration",
+      "setTime",
+      "setTopSpeed",
+      "setInitSpeed",
+    ]),
   },
   computed: {
-      ...mapState([
-        'acceleration', 'topSpeed', 'initSpeed', 'time'
-      ])
-  }
-}
+    ...mapState(["acceleration", "topSpeed", "initSpeed", "time"]),
+  },
+};
 </script>
 
 <style scoped>
-h3{
+h3 {
   font-size: 1.5vw;
 }
-.formula{
+.formula {
   font-size: 1.5vw;
   background-color: red;
   padding: 0 1vw;
@@ -52,18 +76,18 @@ h3{
   width: max-content;
   margin: 0.2vw auto;
 }
-.sectionColumns{
+.sectionColumns {
   display: flex;
   flex-wrap: wrap;
 }
-.containData{
+.containData {
   margin: 1vw auto;
   width: 80vw;
 }
-.variables{
+.variables {
   color: darkgreen;
 }
-.buttonCalculate{
+.buttonCalculate {
   padding: 1vw;
   border-radius: 3vw;
   background-color: lightgreen;

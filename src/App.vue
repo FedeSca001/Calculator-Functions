@@ -5,18 +5,21 @@
     <v-main>
       <router-view />
     </v-main>
+    <Clean />
   </v-app>
 </template>
 
 <script>
 import NavBar from "@/components/navBar.vue";
 import Display from "./components/Display.vue";
+import Clean from './components/Clean.vue';
 
 export default {
   name: "App",
   components: {
     NavBar,
     Display,
+    Clean,
   },
   data: () => ({
     //

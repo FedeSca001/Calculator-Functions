@@ -1,13 +1,13 @@
 <template>
   <div @keyup.enter="calculateDistance" class="containData">
-    <h3>Acceleration</h3>
+    <h3>Distance</h3>
     <h4 class="formula">distance = speed * time</h4>
     <section class="sectionColumns">
       <v-col cols="6" class="variables">     
         <p>Speed</p>
         <input
           type="number"
-          placeholder="Speed in m/s"
+          :placeholder= speed
           @change="
             (e) => {
               setSpeed(e.target.value);
@@ -17,7 +17,7 @@
         <p>Time</p>
         <input
           type="number"
-          placeholder="Time in s"
+          :placeholder= time 
           @change="
             (e) => {
               setTime(e.target.value);

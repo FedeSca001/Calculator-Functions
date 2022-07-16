@@ -7,7 +7,7 @@
         <p>Force</p>
         <input
           type="number"
-          placeholder="Force"
+          :placeholder= force
           @change="
             (e) => {
               setForce(e.target.value);
@@ -17,7 +17,7 @@
         <p>Distance</p>
         <input
           type="number"
-          placeholder="Distance"
+          :placeholder= distance
           @change="
             (e) => {
               setDistance(e.target.value);
@@ -27,7 +27,7 @@
         <p>Angle</p>
         <input
           type="number"
-          placeholder="Angle"
+          :placeholder= angle
           @change="
             (e) => {
               setAngle(e.target.value);
@@ -55,7 +55,7 @@ export default {
     ...mapMutations(["calculateWork", "setForce", "setDistance", "setAngle"]),
   },
   computed: {
-    ...mapState(["work"]),
+    ...mapState(["work", "angle", "distance", "force"]),
   },
 };
 </script>

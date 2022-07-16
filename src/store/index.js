@@ -66,6 +66,19 @@ export default new Vuex.Store({
     },
     setSpeed(state, n){
       state.speed = n;
+    },
+    clearAll (state){
+        state.acceleration = 0
+        state.speed = 0
+        state.topSpeed = 0
+        state.initSpeed = 0
+        state.time = 0
+        state.mass = 0
+        state.distance = 0
+        state.force = 0
+        state.angle = 0
+        state.work = 0
+        state.power = 0
     }
   },
 });

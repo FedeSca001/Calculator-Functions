@@ -1,5 +1,5 @@
 <template>
-  <div class="containData">
+  <div class="containData" @keydown.enter="calculateForce">
     <h3>Force</h3>
     <h4 class="formula">Force = mass * acceleration</h4>
     <section class="sectionColumns">
@@ -7,7 +7,7 @@
         <p>Mass</p>
         <input
           type="number"
-          placeholder="Mass"
+          :placeholder= mass
           @change="
             (e) => {
               setMass(e.target.value);
@@ -17,7 +17,7 @@
         <p>Acceleration</p>
         <input
           type="number"
-          placeholder="Top speed in m/s"
+          :placeholder= acceleration
           @change="
             (e) => {
               setAcceleration(e.target.value);
@@ -44,7 +44,7 @@ export default {
     ...mapMutations(["setMass", "calculateForce", "setAcceleration"]),
   },
   computed: {
-    ...mapState(["acceleration", "force"]),
+    ...mapState(["acceleration", "force", "mass"]),
   },
 };
 </script>

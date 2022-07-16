@@ -7,7 +7,7 @@
         <p>Initial velocity</p>
         <input
           type="number"
-          placeholder="Initial speed in m/s"
+          :placeholder= initSpeed
           @change="
             (e) => {
               setInitSpeed(e.target.value);
@@ -17,7 +17,7 @@
         <p>Top speed</p>
         <input
           type="number"
-          placeholder="Top speed in m/s"
+          :placeholder= topSpeed
           @change="
             (e) => {
               setTopSpeed(e.target.value);
@@ -27,7 +27,7 @@
         <p>Time</p>
         <input
           type="number"
-          placeholder="Time in s"
+          :placeholder= time
           @change="
             (e) => {
               setTime(e.target.value);

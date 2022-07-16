@@ -6,6 +6,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     acceleration: 0,
+    speed: 0,
     topSpeed: 0,
     initSpeed: 0,
     time: 0,
@@ -32,6 +33,9 @@ export default new Vuex.Store({
     },
     calculatePower(state) {
       state.power = state.work / state.time;
+    },
+    calculateDistance(state){
+      state.distance = state.speed * state.time;
     },
     setTime(state, n) {
       state.time = n;
@@ -60,5 +64,8 @@ export default new Vuex.Store({
     setMass(state, n) {
       state.mass = n;
     },
+    setSpeed(state, n){
+      state.speed = n;
+    }
   },
 });

@@ -1,6 +1,6 @@
 <template>
   <section class="displayContainter">
-    <h2>Display</h2>
+    <h2>Display variables</h2>
     <div class="flexContain">
       <p>Initial speed: {{ initSpeed }}</p>
       <p>Top speed: {{ topSpeed }}</p>

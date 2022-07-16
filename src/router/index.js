@@ -16,11 +16,6 @@ const routes = [
     component: () => import("@/views/Aceleration.vue"),
   },
   {
-    path: "/time",
-    name: "time-comp",
-    component: () => import("@/views/Time.vue"),
-  },
-  {
     path: "/force",
     name: "force-comp",
     component: () => import("@/views/Force.vue"),
@@ -35,6 +30,11 @@ const routes = [
     name: "work-comp",
     component: () => import("@/views/Work.vue"),
   },
+  {
+    path:'/distance',
+    name:'distance-comp',
+    component: ()=> import('@/views/Distance.vue'),
+  }
 ];
 
 const router = new VueRouter({

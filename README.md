@@ -1,24 +1,2 @@
-# calculator-function
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+This project complies with the use of vuex and router in vue.
+Global variables and functions are implemented in many components that are displayed in a view.
